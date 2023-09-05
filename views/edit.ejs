@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <%- include("bootstrap.ejs") -%>
+        <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>Edit your post</h1>
+    <br>
+    <div class="edit">
+
+        <p>Post id:
+            <b>
+                <%= post.id %>
+            </b>
+        </p>
+
+        <p>Post username:
+            <b>
+                <%= post.username %>
+            </b>
+        </p>
+
+        <br>
+        
+        <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+            <textarea name="content" class="form-control" cols="20" rows="5" placeholder="<%= post.content %>"
+                id="floatingTextarea"></textarea>
+            <br>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+
+    <%- include("bootstrapScript.ejs") -%>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <%- include("bootstrap.ejs") -%>
+        <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <%- include('nav.ejs'); -%>
+
+
+        <h1>Quora Posts</h1>
+        <% for(list of posts){ %>
+
+            <div class="contain">
+
+                <h3 class="h3">
+                    <%= list.username %>
+                </h3>
+                <p class="p">
+                    <%= list.content %>
+                </p>
+
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+
+                    
+                    <a href="http://localhost:8080/posts/<%=list.id%>">
+                        <button type="button" class="btn btn-outline-secondary">See In Detail</button>
+                    </a>
+
+
+
+                    <a href="http://localhost:8080/posts/<%=list.id%>/edit">
+                        <button type="button"  class="btn btn-outline-secondary">Edit</button>
+                        
+                    </a>
+                    
+                    
+                    <form method="post"  action="/posts/<%=list.id%>?_method=DELETE">
+        
+                        <button class="btn btn-outline-secondary">Delete</button>
+        
+                    </form>
+
+                </div>
+
+
+            </div>
+
+            
+            <% } %>
+            
+            <a href="http://localhost:8080/posts/new">
+
+                <button id="btn" type="button" class="btn btn-secondary">New Post</button>
+            </a>
+
+
+
+                <%- include("bootstrapScript.ejs") -%>
+</body>
+
+</html>

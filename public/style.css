@@ -1,0 +1,32 @@
+h1 {
+    color: rgb(185 43 39);
+    ;
+    text-align: center;
+}
+
+.contain {
+    background-color: #dbaaae;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 2rem;
+}
+
+
+
+
+.edit {
+    background-color: #dbaaae;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: #d89197;
+    width: 30%;
+    margin: auto;
+}
+
+#btn{
+    margin-left: 21.5rem;
+    margin-top: 2rem;
+}

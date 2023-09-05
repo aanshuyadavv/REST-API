@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <%- include("bootstrap.ejs") -%>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include('nav.ejs'); -%>  
+
+    <h1>Here is your post in details</h1>
+
+    <div class="contain">
+
+        <h3 class="h3">
+            <%= post.username %>
+        </h3>
+        <h5>Post id: <%= post.id %>
+        </h5>
+        <p class="p">
+            <%= post.content %>
+        </p>
+
+
+    </div>
+
+
+    <%- include("bootstrapScript.ejs") -%>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <%- include("bootstrap.ejs") -%>
+</head>
+
+<body>
+
+    <%- include('nav.ejs'); -%>
+
+
+        <div
+            style="background-color: #dbaaae; border: 2px solid #d69a9f; width: 50%; margin: auto; height: 18rem; border-radius: 0.5rem; margin-top: 3rem;">
+
+
+            <form method="post" action="/posts" style="position: relative;
+            top: 2rem;">
+                <input type="text" name="username" style="width: 50%; margin: auto;" placeholder="enter your username"
+                    class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+                <br>
+                <textarea style="height: 100px; width: 50%; margin: auto;" name="content" cols="30"
+                    placeholder="Create your post" rows="10" class="form-control"></textarea>
+                <br>
+                <button type="submit" style="margin-left: 11rem;" class="btn btn-primary">submit</button>
+            </form>
+
+        </div>
+
+        <%- include("bootstrapScript.ejs") -%>
+</body>
+
+</html>
